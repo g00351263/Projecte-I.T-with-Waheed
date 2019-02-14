@@ -1,8 +1,8 @@
 <?php include('server.php') ?>
+
 <html>
     <head>
-        <title>Registration Page</title>
-
+        <title>Login Page</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
@@ -18,36 +18,25 @@
   <a href="login.php" class="w3-bar-item w3-button w3-mobile">Log In</a>
   <a href="about.php" class="w3-bar-item w3-button w3-mobile">About Us</a>
   <a href="contactus.php" class="w3-bar-item w3-button w3-mobile">Contact Us</a>
-<div class="header">
-  	<h2>Login</h2>
- 	<h2>Register</h2>
-  </div>
-	
-  <form method="post" action="register.php">
+</div>
+  <form method="post" action="login.php">
   	<?php include('errors.php'); ?>
   	<div class="input-group">
-  	  <label>Username</label>
-  	  <input type="text" name="username" value="<?php echo $username; ?>">
+  		<label>Username</label>
+  		<input type="text" name="username" >
   	</div>
   	<div class="input-group">
-  	  <label>Email</label>
-  	  <input type="email" name="email" value="<?php echo $email; ?>">
+  		<label>Password</label>
+  		<input type="password" name="password">
   	</div>
   	<div class="input-group">
-  	  <label>Password</label>
-  	  <input type="password" name="password_1">
-  	</div>
-  	<div class="input-group">
-  	  <label>Confirm password</label>
-  	  <input type="password" name="password_2">
-  	</div>
-  	<div class="input-group">
-  	  <button type="submit" class="btn" name="reg_user">Register</button>
+  		<button type="submit" class="btn" name="login_user">Login</button>
   	</div>
   	<p>
-  		Already a member? <a href="login.php">Sign in</a>
+  		Not yet a member? <a href="register.php">Sign up</a>
   	</p>
   </form>
+      
     </body>
 </html>
 
