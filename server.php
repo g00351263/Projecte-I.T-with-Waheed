@@ -1,13 +1,14 @@
 <?php
+// Raja Naseer Ahmed Khan G00351263. PHP for inserting the details into database of login access //
 session_start();
 
 // initializing variables
-$username = "";
-$email    = "";
-$errors = array(); 
+$username = ""; // blank username //
+$email    = ""; // blank email //
+$errors = array(); // errors pushed to array //
 
 // connect to the database
-$db = mysqli_connect('localhost', 'root', '', 'registration');
+$db = mysqli_connect('localhost', 'root', '', 'registration'); // connection to registration //
 
 // REGISTER USER
 if (isset($_POST['reg_user'])) {

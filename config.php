@@ -5,7 +5,7 @@ session_start();
 $host = "localhost"; /* Host name */
 $user = "root"; /* User */
 $password = ""; /* Password */
-$dbname = "ecommerce"; /* Database name */
+$dbname = "registration"; /* Database name */
 
 $con = mysqli_connect($host, $user, $password,$dbname);
 // Check connection
