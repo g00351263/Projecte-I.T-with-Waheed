@@ -23,7 +23,7 @@
    <body>
       <img src="banner.gif" id="banner" alt="banner"/>
       <marquee>Here is your 1 Stop Shop for Galway City</marquee>
-      <div class="w3-bar w3-black" style="border-color: white; border-style: solid;">
+    <div class="w3-bar w3-black" style="border-color: black; border-style: solid;">
       <a href="index.php" class="w3-bar-item w3-button w3-mobile">Home</a>
       <a href="buy.php" class="w3-bar-item w3-button w3-mobile">Buy</a>
       <a href="sell.php" class="w3-bar-item w3-button w3-mobile">Sell</a>
@@ -31,11 +31,14 @@
       <a href="login.php" class="w3-bar-item w3-button w3-mobile">Log In</a>
       <a href="about.php" class="w3-bar-item w3-button w3-mobile">About Us</a>
       <a href="contactus.php" class="w3-bar-item w3-button w3-mobile">Contact Us</a>
+    </div>
+<div class="header" style="background-color: black; border-style: solid;">
+<br><br>
 
-<div class="header">
-	<h2>Home Page</h2>
+	<h2 style="text-align:center ; color:red;">Home Page</h2>
+	
 </div>
-<div class="content">
+<div class="content" style="background-color: black; border-style: solid;">
   	<!-- notification message -->
   	<?php if (isset($_SESSION['success'])) : ?>
       <div class="error success" >
@@ -50,10 +53,11 @@
 
     <!-- logged in user information -->
     <?php  if (isset($_SESSION['username'])) : ?>
-    	<p>Welcome <strong><?php echo $_SESSION['username']; ?></strong></p>
-    	<p> <a href="index.php?logout='1'" style="color: red;">logout</a> </p>
+    	<p style="color:red;">Welcome :<strong><?php echo $_SESSION['username']; ?></strong></p>
+    <!--	<p> <a href="index.php?logout='1'" style="color: red;">logout</a> </p> -->
     <?php endif ?>
 </div>
+	<marquee>Here is your 1 Stop Shop for Galway City</marquee>
 	<!--	<select>
 			<option>Motors</option>
 			<option>Elctronics</option>
@@ -64,7 +68,7 @@
 			<option>Plants</option>
 		</select>-->
 		<br>
-		<div>
+		<div class="w3-bar w3-black" style="border-color: black; border-style: solid;">
 					<a href="Motors.php" class="w3-bar-item w3-button w3-mobile">Motors</a>
 					<a href="Electronics.php" class="w3-bar-item w3-button w3-mobile">Electronics</a>
 					<a href="Boats.php" class="w3-bar-item w3-button w3-mobile">Boats</a>
@@ -77,7 +81,7 @@
 			<form style="background-color: #990000;" action="/action_page.php">
 		<br>
 		<br>
-			<p style="text-align:center ; font-size:250%;">Please Write Down your Description</p>
+			<p style="text-align:center ; font-size:250%;">Please Write Down Plants Description</p>
 			  Model:<br>
 			  <input type="text" name="Model" value=" ">
 			  <br>
@@ -95,6 +99,6 @@
 			</form> 
 
 			<p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
-
+			<p style="text-align:right ; color: red;";> <a href="index.php?logout='1'">logout</a> </p>
 </body>
 </html>
