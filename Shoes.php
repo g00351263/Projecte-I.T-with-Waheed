@@ -63,14 +63,38 @@
 			<option>Accesories</option>
 			<option>Plants</option>
 		</select>-->
+		<br>
 		<div>
 					<a href="Motors.php" class="w3-bar-item w3-button w3-mobile">Motors</a>
-					<a href="Elctronics.php" class="w3-bar-item w3-button w3-mobile">Elctronics</a>
+					<a href="Electronics.php" class="w3-bar-item w3-button w3-mobile">Electronics</a>
 					<a href="Boats.php" class="w3-bar-item w3-button w3-mobile">Boats</a>
 					<a href="Cloths.php" class="w3-bar-item w3-button w3-mobile">Cloths</a>
 					<a href="Shoes.php" class="w3-bar-item w3-button w3-mobile">Shoes In</a>
-					<a href="Accesories.php" class="w3-bar-item w3-button w3-mobile">Accesories Us</a>
-					<a href="Plants.php" class="w3-bar-item w3-button w3-mobile">Plants Us</a>
+					<a href="Accesories.php" class="w3-bar-item w3-button w3-mobile">Accesories</a>
+					<a href="Plants.php" class="w3-bar-item w3-button w3-mobile">Plants</a>
 		</div>
+			
+			<form style="background-color: #990000;" action="/action_page.php">
+		<br>
+		<br>
+			<p style="text-align:center ; font-size:250%;">Please Write Down your Description</p>
+			  Model:<br>
+			  <input type="text" name="Model" value=" ">
+			  <br>
+			  Color:<br>
+			  <input type="text" name="Color" value=" ">
+			  <br> 
+			  Type:<br>
+			  <input type="text" name="Type" value=" ">
+			  <br>
+			  Year:<br>
+			  <input type="text" name="Year" value=" ">
+			  <br>
+			  <br><br>
+			  <input type="submit" value="Submit">
+			</form> 
+
+			<p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
+
 </body>
 </html>
