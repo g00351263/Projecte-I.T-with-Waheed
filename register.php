@@ -9,14 +9,15 @@
    <body>
       <img src="banner.gif" id="banner" alt="banner"/>
       <marquee>Here is your 1 Stop Shop for Galway City</marquee>
-      <div class="w3-bar w3-black" style="border-color: white; border-style: solid;">
-      <a href="index.php" class="w3-bar-item w3-button w3-mobile">Home</a>
-      <a href="buy.php" class="w3-bar-item w3-button w3-mobile">Buy</a>
-      <a href="sell.php" class="w3-bar-item w3-button w3-mobile">Sell</a>
-      <a href="signup.php" class="w3-bar-item w3-button w3-mobile">Register</a>
-      <a href="login.php" class="w3-bar-item w3-button w3-mobile">Log In</a>
-      <a href="about.php" class="w3-bar-item w3-button w3-mobile">About Us</a>
-      <a href="contactus.php" class="w3-bar-item w3-button w3-mobile">Contact Us</a>
+		  <div class="w3-bar w3-black" style="border-color: white; border-style: solid;">
+		  <a href="index.php" class="w3-bar-item w3-button w3-mobile">Home</a>
+		  <a href="buy.php" class="w3-bar-item w3-button w3-mobile">Buy</a>
+		  <a href="sell.php" class="w3-bar-item w3-button w3-mobile">Sell</a>
+		  <a href="signup.php" class="w3-bar-item w3-button w3-mobile">Register</a>
+		  <a href="login.php" class="w3-bar-item w3-button w3-mobile">Log In</a>
+		  <a href="about.php" class="w3-bar-item w3-button w3-mobile">About Us</a>
+		  <a href="contactus.php" class="w3-bar-item w3-button w3-mobile">Contact Us</a>
+		  </div>
       <div class="header">
          <br>
          <h2>Register</h2>

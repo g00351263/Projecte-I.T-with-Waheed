@@ -23,54 +23,33 @@
    <body>
       <img src="banner.gif" id="banner" alt="banner"/>
       <marquee>Here is your 1 Stop Shop for Galway City</marquee>
-      <div class="w3-bar w3-black" style="border-color: white; border-style: solid;">
-      <a href="index.php" class="w3-bar-item w3-button w3-mobile">Home</a>
-      <a href="buy.php" class="w3-bar-item w3-button w3-mobile">Buy</a>
-      <a href="sell.php" class="w3-bar-item w3-button w3-mobile">Sell</a>
-      <a href="signup.php" class="w3-bar-item w3-button w3-mobile">Register</a>
-      <a href="login.php" class="w3-bar-item w3-button w3-mobile">Log In</a>
-      <a href="about.php" class="w3-bar-item w3-button w3-mobile">About Us</a>
-      <a href="contactus.php" class="w3-bar-item w3-button w3-mobile">Contact Us</a>
+     <div class="w3-bar w3-black" style="border-color: black; border-style: solid;">
+		  <a href="index.php" class="w3-bar-item w3-button w3-mobile">Home</a>
+		  <a href="buy.php" class="w3-bar-item w3-button w3-mobile">Buy</a>
+		  <a href="sell.php" class="w3-bar-item w3-button w3-mobile">Sell</a>
+		  <a href="signup.php" class="w3-bar-item w3-button w3-mobile">Register</a>
+		  <a href="login.php" class="w3-bar-item w3-button w3-mobile">Log In</a>
+		  <a href="about.php" class="w3-bar-item w3-button w3-mobile">About Us</a>
+		  <a href="contactus.php" class="w3-bar-item w3-button w3-mobile">Contact Us</a>
+	  </div>
+<!-- <div class="header" style="background-color: black; border-style: solid;"> -->
+	
+<!--	<h6 style="text-align:center ; color:red;">Sell Page</h6>	-->
+	<img src="Banner-Sell-1400x302.jpg" alt="Banners" style="width:1500px;height:300px;">
 
-<div class="header">
-	<h2>Home Page</h2>
-</div>
-<div class="content">
-  	<!-- notification message -->
-  	<?php if (isset($_SESSION['success'])) : ?>
-      <div class="error success" >
-      	<h3>
-          <?php 
-          	echo $_SESSION['success']; 
-          	unset($_SESSION['success']);
-          ?>
-      	</h3>
-      </div>
-  	<?php endif ?>
-
-    <!-- logged in user information -->
-    <?php  if (isset($_SESSION['username'])) : ?>
-    	<p>Welcome <strong><?php echo $_SESSION['username']; ?></strong></p>
-    	<p> <a href="index.php?logout='1'" style="color: red;">logout</a> </p>
-    <?php endif ?>
-</div>
-	<!--	<select>
-			<option>Motors</option>
-			<option>Elctronics</option>
-			<option>Boats</option>
-			<option>Cloths</option>
-			<option>Shoes</option>
-			<option>Accesories</option>
-			<option>Plants</option>
-		</select>-->
-		<div>
+		
+		<div class="w3-bar w3-black" style="border-color: black; border-style: solid;">
 					<a href="Motors.php" class="w3-bar-item w3-button w3-mobile">Motors</a>
 					<a href="Elctronics.php" class="w3-bar-item w3-button w3-mobile">Elctronics</a>
 					<a href="Boats.php" class="w3-bar-item w3-button w3-mobile">Boats</a>
 					<a href="Cloths.php" class="w3-bar-item w3-button w3-mobile">Cloths</a>
-					<a href="Shoes.php" class="w3-bar-item w3-button w3-mobile">Shoes In</a>
+					<a href="Shoes.php" class="w3-bar-item w3-button w3-mobile">Shoes</a>
 					<a href="Accesories.php" class="w3-bar-item w3-button w3-mobile">Accesories Us</a>
 					<a href="Plants.php" class="w3-bar-item w3-button w3-mobile">Plants Us</a>
 		</div>
+		
+		 <marquee>Here is your 1 Stop Shop for Galway City</marquee>
+		<div class="header" style="background-color: black; border-style: solid;"> </div>
+		<p style="text-align:right ; color: red;";> <a href="index.php?logout='1'">logout</a> </p>
 </body>
 </html>

@@ -33,10 +33,9 @@
       <a href="contactus.php" class="w3-bar-item w3-button w3-mobile">Contact Us</a>
     </div>
 <div class="header" style="background-color: black; border-style: solid;">
-<br><br>
 
-	<h2 style="text-align:center ; color:red;">Home Page</h2>
-	
+<!--	<h2 style="text-align:center ; color:red;">Home Page</h2>	-->
+	<img src="675620d0d624805.jpg" alt="Banners" style="width:1500px;height:300px;">
 </div>
 <div class="content" style="background-color: black; border-style: solid;">
   	<!-- notification message -->
@@ -53,7 +52,7 @@
 
     <!-- logged in user information -->
     <?php  if (isset($_SESSION['username'])) : ?>
-    	<p style="color:red;">Welcome :<strong><?php echo $_SESSION['username']; ?></strong></p>
+    <!--	<p style="color:red;">Welcome :<strong><?php echo $_SESSION['username']; ?></strong></p>-->
     <!--	<p> <a href="index.php?logout='1'" style="color: red;">logout</a> </p> -->
     <?php endif ?>
 </div>
