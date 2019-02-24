@@ -4,7 +4,10 @@ session_start();
 
 // initializing variables
 $username = ""; // blank username //
+$userdata = "";
 $email    = ""; // blank email //
+$category = "";
+$description = "";
 $errors = array(); // errors pushed to array //
 
 // connect to the database
@@ -55,6 +58,8 @@ if (isset($_POST['reg_user'])) {
   	header('location: index.php');
   }
 }
+
+
 // LOGIN USER
 if (isset($_POST['login_user'])) {
   $username = mysqli_real_escape_string($db, $_POST['username']);
@@ -80,5 +85,24 @@ if (isset($_POST['login_user'])) {
   	}
   }
 }
+
+
+////// SELLING ADVERTISEMENT /////////
+// REGISTER USER
+if (isset($_POST['insert'])) {
+  // receive all input values from the form
+  $username = mysqli_real_escape_string($db, $_POST['username']);
+  $category = mysqli_real_escape_string($db, $_POST['category']);
+  $description = mysqli_real_escape_string($db, $_POST['description']);
+  $file = addslashes(file_get_contents($_FILES["image"]["tmp_name"])); 
+
+  $query = "INSERT INTO ads (category, description, username) VALUES ('$category', '$description', '$username','$file')";
+  	
+	mysqli_query($db, $query);
+  	$_SESSION['username'] = $username;
+  	$_SESSION['success'] = "You are now logged in";
+  	header('location: login.php');
+  }
+
 
 ?>
