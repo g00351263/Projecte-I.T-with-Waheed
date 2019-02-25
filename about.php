@@ -28,7 +28,6 @@
 
 <div class="w3-bar w3-black">
   <a href="index.php" class="w3-bar-item w3-button w3-mobile">Home</a>
-  <a href="buy.php" class="w3-bar-item w3-button w3-mobile">Buy</a>
   <a href="sell.php" class="w3-bar-item w3-button w3-mobile">Sell</a>
   <a href="signup.php" class="w3-bar-item w3-button w3-mobile">Sign Up</a>
   <a href="login.php" class="w3-bar-item w3-button w3-mobile">Log In</a>
