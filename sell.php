@@ -124,7 +124,7 @@ $image = $_FILES['image']['tmp_name'];
         if($result)
         {
             echo " <br/>Image uploaded.";
-            header('location:buy.php');
+            header('location:index.php');
         }
         else
         {
