@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#waheed{
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+#raja{
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+     #banner{
+          width:100%;
+     }
+     
+</style>
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+<body> 
+<img src="banner.gif" id="banner"/>
+<marquee>Here is your 1 Stop Shop for Galway City</marquee>
+
+<div class="w3-bar w3-black">
+  <a href="index.php" class="w3-bar-item w3-button w3-mobile">Home</a>
+  <a href="buy.php" class="w3-bar-item w3-button w3-mobile">Buy</a>
+  <a href="sell.php" class="w3-bar-item w3-button w3-mobile">Sell</a>
+  <a href="signup.php" class="w3-bar-item w3-button w3-mobile">Sign Up</a>
+  <a href="login.php" class="w3-bar-item w3-button w3-mobile">Log In</a>
+  <a href="about.php" class="w3-bar-item w3-button w3-mobile">About Us</a>
+  <a href="contactus.php" class="w3-bar-item w3-button w3-mobile">Contact Us</a>
+</div>
+</div>
+<h2 class="w3-center">"Meet The Team" Section</h2>
+		 <div class="w3-center">
+<br>
+
+		 </div>
+<div class="row">
+  <div class="column">
+    <div class="w3-center">
+      <img src="raja.jpg" alt="Jane" id="raja">
+      <div class="container">
+        <h2 class="w3-center">Raja Naseer Ahmed Khan</h2>
+        <p class="w3-center">CEO & Founder</p>
+        <p class="w3-center">Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p class="w3-center">example@example.com</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="w3-center">
+      <img src="waheed.jpg" alt="Mike" id="waheed">
+      <div class="container">
+        <h2 class="w3-center">Waheed Akram</h2>
+        <p class="w3-center">Art Director</p>
+        <p class="w3-center">Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p class="w3-center">example@example.com</p>
+      </div>
+    </div>
+  </div>
+
+	 </div>
+
+</body>
+</html>
