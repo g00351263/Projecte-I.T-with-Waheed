@@ -1,4 +1,4 @@
-<?php include('server.php') ?>
+<?php include('logics/server.php') ?>
 <html>
    <head>
       <title>Registration Page</title>
@@ -7,7 +7,7 @@
       <link rel="stylesheet" href="css/style1.css">
    </head>
    <body>
-      <img src="banner.gif" id="banner" alt="banner"/>
+      <img src="images/banner.gif" id="banner" alt="banner"/>
       <marquee>Here is your 1 Stop Shop for Galway City</marquee>
       <div class="w3-bar w3-black" style="border-color: white; border-style: solid;">
       <a href="index.php" class="w3-bar-item w3-button w3-mobile">Home</a>
@@ -21,7 +21,7 @@
          <h2>Register</h2>
       </div>
       <form method="post" action="register.php" style="border-color: white; border-style: solid;">
-         <?php include('errors.php'); ?>
+         <?php include('logics/errors.php'); ?>
          <div class="input-group">
 		 <br>
             <label>Username</label>

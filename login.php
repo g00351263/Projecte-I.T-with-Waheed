@@ -1,4 +1,4 @@
-<?php include('server.php') ?>
+<?php include('logics/server.php') ?>
     <html>
 
     <head>
@@ -13,7 +13,7 @@
 
     <body>
 
-        <img src="banner.gif" id="banner" alt="banner" />
+        <img src="images/banner.gif" id="banner" alt="banner" />
         <marquee id="bannerAd">Upload the Advertisement for Free and Sell your Stuff</marquee>
 
         <div class="w3-bar w3-black" style="border-color: white; border-style: solid;">
@@ -30,7 +30,7 @@
             </div>
             
 			<form method="post" action="login.php" style="border-color: white; border-style: solid;">
-                <?php include('errors.php'); ?>
+                <?php include('logics/errors.php'); ?>
                     <div class="input-group">
                         <br>
                         <label style="align:left;">Username</label>

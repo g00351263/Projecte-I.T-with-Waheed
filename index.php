@@ -13,16 +13,20 @@
       
 	  <marquee>Here is your 1 Stop Shop for Galway City</marquee>
       
-<div class="w3-bar w3-black" style="border-color: white; border-style: solid;">
+<div id="bor" class="w3-bar w3-black" style="border-color: white; border-style: solid;">
 	  <a href="index.php" class="w3-bar-item w3-button w3-mobile">Home</a>
       <a href="sell.php" class="w3-bar-item w3-button w3-mobile">Sell</a>
-      <a href="signup.php" class="w3-bar-item w3-button w3-mobile">Register</a>
+      <a href="register.php" class="w3-bar-item w3-button w3-mobile">Register</a>
       <a href="login.php" class="w3-bar-item w3-button w3-mobile">Log In</a>
       <a href="about.php" class="w3-bar-item w3-button w3-mobile">About Us</a>
       <a href="contactus.php" class="w3-bar-item w3-button w3-mobile">Contact Us</a>
-
+</div>
 <div class="header">
 <br>
+
+
+
+
 
 <div class="content">
   	<!-- notification message -->
@@ -44,13 +48,17 @@
     <?php endif ?>
 </div>
 	
-
+<br>
+<!-- Page content -->
+<div class="main">
       <?php
          $servername = "localhost";
          $username = "root";
          $password = "";
          $dbname = "registration";
-         
+         $count = 0;
+		 
+		 
          // Create connection
          $conn = new mysqli($servername, $username, $password, $dbname);
          // Check connection
@@ -58,15 +66,38 @@
              die("Connection failed: " . $conn->connect_error);
          } 
          
-         $sql = "SELECT * FROM `ads`";
+
+         $sql = "SELECT * FROM `ads` order by id desc";
          $result = $conn->query($sql);
          
          if ($result->num_rows > 0) {
              // output data of each row
              while($row = $result->fetch_assoc()) {
-                 echo '<a href="buy.php"><img src="data:image/jpeg;base64,'.base64_encode($row['photos'] ).'" height="200" width="200" class="img-thumnail"/></a>';  
-         
+$count++;
+		$field1name = $row["category"];
+		$field2name = $row["description"];
+        $field3name = $row["username"];
+		
+	echo '<div id="adTable" align="center">
+			<table border="1" id="size1" style="width:50%">
+				<tr>
+					<td style="width:25%"><a href="buy.php"><img src="data:image/jpeg;base64,'.base64_encode($row['photos'] ).'" height="200" width="200" class="img-thumnail"/>'.'
+				</td>
+										<td id="td1"><b>Category : '.$field1name. '<br>Description : ' .$field3name.'</b><br/><br>
+					</td>
+				</tr>
+					
+				
+				<tr>
+					<td><b>Category : '.$field1name. '<br>Description : ' .$field3name.'</b><br/><br>
+					</td></a>
+										<td><b>Category : '.$field1name. '<br>Description : ' .$field3name.'</b><br/><br>
+					</td></a>
+				</tr>
+			</table></div><br>';
+  				 
              }
+			 echo "<p align='center'>Total Records Found $count</p>";
          } else {
              echo "0 results";
          }
@@ -74,7 +105,7 @@
          $conn->close();
          ?> 
 
-
+</div>
 
 	
 </body>

@@ -23,7 +23,7 @@
 
 
 <body> 
-<img src="images\banner.gif" id="banner"/>
+<img src="images/banner.gif" id="banner"/>
 <marquee>Here is your 1 Stop Shop for Galway City</marquee>
 
 <div class="w3-bar w3-black">
@@ -34,7 +34,6 @@
   <a href="about.php" class="w3-bar-item w3-button w3-mobile">About Us</a>
   <a href="contactus.php" class="w3-bar-item w3-button w3-mobile">Contact Us</a>
 </div>
-</div>
 <h2 class="w3-center">"Meet The Team" Section</h2>
 		 <div class="w3-center">
 <br>
@@ -43,7 +42,7 @@
 <div class="row">
   <div class="column">
     <div class="w3-center">
-      <img src="images\raja.jpg" alt="Jane" id="raja">
+      <img src="raja.jpg" alt="Jane" id="raja">
       <div class="container">
         <h2 class="w3-center">Raja Naseer Ahmed Khan</h2>
         <p class="w3-center">CEO & Founder</p>
@@ -55,7 +54,7 @@
 
   <div class="column">
     <div class="w3-center">
-      <img src="images\waheed.jpg" alt="Mike" id="waheed">
+      <img src="waheed.jpg" alt="Mike" id="waheed">
       <div class="container">
         <h2 class="w3-center">Waheed Akram</h2>
         <p class="w3-center">Art Director</p>

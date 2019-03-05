@@ -1,4 +1,4 @@
-#banner{
+﻿#banner{
     width:100%;
 }
 input {
@@ -24,3 +24,14 @@ label {
     margin-left: 158px;
     border-radius: 10px;
 	}
+-2
+
+#size1
+{
+  table-layout:fixed;
+}
+#td1
+{
+  width:20px; 
+  word-wrap:break-word;
+}
