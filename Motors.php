@@ -57,15 +57,7 @@
     <?php endif ?>
 </div>
 	<marquee>Here is your 1 Stop Shop for Galway City</marquee>
-	<!--	<select>
-			<option>Motors</option>
-			<option>Elctronics</option>
-			<option>Boats</option>
-			<option>Cloths</option>
-			<option>Shoes</option>
-			<option>Accesories</option>
-			<option>Plants</option>
-		</select>-->
+
 		<br>
 		<div class="w3-bar w3-black" style="border-color: black; border-style: solid;">
 					<a href="Motors.php" class="w3-bar-item w3-button w3-mobile">Motors</a>
@@ -80,7 +72,7 @@
 			<form style="background-color: #990000;" action="/action_page.php">
 		<br>
 		<br>
-			<p style="text-align:center ; font-size:250%;">Please Write Down Plants Description</p>
+			 <h2 style="text-align:center; color:white;">Fill in the form below to sell your stuff</h2>
 			  Model:<br>
 			  <input type="text" name="Model" value=" ">
 			  <br>

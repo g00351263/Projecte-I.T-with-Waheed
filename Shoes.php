@@ -34,8 +34,8 @@
     </div>
 <div class="header" style="background-color: black; border-style: solid;">
 <br><br>
-
-	<h2 style="text-align:center ; color:red;">Home Page</h2>
+	<img src="SandalsForWomen.jpg" id="banner" alt="banner" style="width:1500px;height:300px;/>	
+<!--	<h2 style="text-align:center ; color:red;">Home Page</h2>-->
 	
 </div>
 <div class="content" style="background-color: black; border-style: solid;">
@@ -53,20 +53,11 @@
 
     <!-- logged in user information -->
     <?php  if (isset($_SESSION['username'])) : ?>
-    	<p style="color:red;">Welcome :<strong><?php echo $_SESSION['username']; ?></strong></p>
+    <!--	<p style="color:red;">Welcome :<strong><?php echo $_SESSION['username']; ?></strong></p>-->
     <!--	<p> <a href="index.php?logout='1'" style="color: red;">logout</a> </p> -->
     <?php endif ?>
 </div>
 	<marquee>Here is your 1 Stop Shop for Galway City</marquee>
-	<!--	<select>
-			<option>Motors</option>
-			<option>Elctronics</option>
-			<option>Boats</option>
-			<option>Cloths</option>
-			<option>Shoes</option>
-			<option>Accesories</option>
-			<option>Plants</option>
-		</select>-->
 		<br>
 		<div class="w3-bar w3-black" style="border-color: black; border-style: solid;">
 					<a href="Motors.php" class="w3-bar-item w3-button w3-mobile">Motors</a>
@@ -80,25 +71,78 @@
 			
 			<form style="background-color: #990000;" action="/action_page.php">
 		<br>
-		<br>
-			<p style="text-align:center ; font-size:250%;">Please Write Down Plants Description</p>
-			  Model:<br>
-			  <input type="text" name="Model" value=" ">
+		
+			<div class="header">
+            <br>
+            <h2 style="text-align:center; color:white;">Fill in the form below to sell your stuff</h2>
+        </div>
+        <form method="post" enctype="multipart/form-data">
+
+  			  Model:<br>
+			  <input type="text" name="model" value=" ">
 			  <br>
 			  Color:<br>
-			  <input type="text" name="Color" value=" ">
+			  <input type="text" name="color" value=" ">
 			  <br> 
 			  Type:<br>
-			  <input type="text" name="Type" value=" ">
+			  <input type="text" name="type" value=" ">
 			  <br>
 			  Year:<br>
-			  <input type="text" name="Year" value=" ">
+			  <input type="text" name="year" value=" ">
 			  <br>
 			  <br><br>
-			  <input type="submit" value="Submit">
-			</form> 
+		<!--	 <input type="submit" value="Submit">	-->
 
-			<p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
+            <input type="file" name="image" />
+            <input type="submit" name="submit" value="Upload" />
+        </form>
+        <?php
+
+	 $dbcon=mysqli_connect('localhost','root','','registration');
+
+		  // $qry="insert into ads (category,description,username,photos) values ('raja','raja','raja','$image')";
+
+    if(isset($_POST['submit']))
+    {
+     if(getimagesize($_FILES['image']['tmp_name'])==FALSE)
+     {
+        echo " error ";
+     }
+     else
+     {
+$image = $_FILES['image']['tmp_name'];
+		        $image = addslashes(file_get_contents($image));
+        saveimage($image);
+     }
+    }
+    function saveimage($image)
+    {
+
+     	 $dbcon=mysqli_connect('localhost','root','','registration');
+
+		//$username = mysqli_real_escape_string($dbcon, $_POST['username']);
+		$model = mysqli_real_escape_string($dbcon, $_POST['model']);
+		$color = mysqli_real_escape_string($dbcon, $_POST['color']);  
+		$type = mysqli_real_escape_string($dbcon, $_POST['type']);
+		$year = mysqli_real_escape_string($dbcon, $_POST['year']);
+		
+		   $qry="insert into boats (username,model,color,type,year,photos) values ('raja','$model','$color','$type','$year','$image')";
+
+        $result=mysqli_query($dbcon,$qry);
+        if($result)
+        {
+            echo " <br/>Image uploaded.";
+            header('location:index.php');
+        }
+        else
+        {
+            echo " error ";
+        }
+    }
+?>
+	
+			</form> 
+		<br>			
 			<p style="text-align:right ; color: red;";> <a href="index.php?logout='1'">logout</a> </p>
 </body>
 </html>
