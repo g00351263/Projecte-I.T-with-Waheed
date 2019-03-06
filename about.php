@@ -20,13 +20,12 @@
 </head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
+<link rel="stylesheet" href="cs/style.css">
 
 <body> 
-<img src="images\banner.gif" id="banner"/>
+      <img src="images\banner.gif" id="banner" alt="banner"/>
 <marquee>Here is your 1 Stop Shop for Galway City</marquee>
-
-<div class="w3-bar w3-black">
+<div  class="w3-bar w3-black" style="padding-left:160px;">
   <a href="index.php" class="w3-bar-item w3-button w3-mobile">Home</a>
   <a href="sell.php" class="w3-bar-item w3-button w3-mobile">Sell</a>
   <a href="register.php" class="w3-bar-item w3-button w3-mobile">Sign Up</a>
@@ -47,8 +46,8 @@
       <div class="container">
         <h2 class="w3-center">Raja Naseer Ahmed Khan</h2>
         <p class="w3-center">CEO & Founder</p>
-        <p class="w3-center">Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p class="w3-center">example@example.com</p>
+        <p class="w3-center">BSC Software Project Backend Developer</p>
+        <p class="w3-center">g00351263@gmit.ie</p>
       </div>
     </div>
   </div>
@@ -59,8 +58,8 @@
       <div class="container">
         <h2 class="w3-center">Waheed Akram</h2>
         <p class="w3-center">Art Director</p>
-        <p class="w3-center">Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p class="w3-center">example@example.com</p>
+        <p class="w3-center">BSC Software Project Frontend Developer</p>
+        <p class="w3-center">g00351263@gmit.ie</p>
       </div>
     </div>
   </div>

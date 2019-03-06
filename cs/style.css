@@ -1,9 +1,6 @@
 
 /* Container */
-.container{
-    width:40%;
-    margin:0 auto;
-}
+
 
 /* Login */
 #div_login{
@@ -52,4 +49,10 @@
         width: 99%;
     }
 
-
+@media screen and (max-width:400px){
+    .container{
+        width: 100%;
+    }
+    #div_login{
+        width: 99%;
+    }

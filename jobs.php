@@ -13,7 +13,7 @@
      }
 @media screen and (max-width:600px){
     #banner{
-        padding-left: 80px;
+        padding-left: 0px;
     }
 }
 </style>
@@ -86,7 +86,7 @@
          } 
          
 
-         $sql = "SELECT * FROM `ads` order by id desc";
+         $sql = "SELECT * FROM `ads` where category='jobs' ORDER by id desc";
          $result = $conn->query($sql);
          
          if ($result->num_rows > 0) {
@@ -97,7 +97,7 @@ $count++;
 		$field2name = $row["description"];
         $field3name = $row["username"];
 		
-	echo '<div id="adTable" align="center" style="margin-left: 20px;">
+	echo '<div id="adTable" align="center">
 	
 			<table border="1" class="size1" id="size1" style="width:95%">
 				<tr>

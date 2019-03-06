@@ -25,11 +25,11 @@
 </head>
 
 <body>
-    <img src="images/banner.gif" id="banner" alt="banner" />
+      <img src="images\banner.gif" id="banner" style="padding-left: 160px; width: 100%;" alt="banner"/>
 
     <marquee>Here is your 1 Stop Shop for Galway City</marquee>
 
-    <div class="w3-bar w3-black" style="border-color: white; border-style: solid;">
+<div  class="w3-bar w3-black" style="padding-left:160px;">
         <a href="index.php" class="w3-bar-item w3-button w3-mobile">Home</a>
         <a href="sell.php" class="w3-bar-item w3-button w3-mobile">Sell</a>
         <a href="register.php" class="w3-bar-item w3-button w3-mobile">Register</a>

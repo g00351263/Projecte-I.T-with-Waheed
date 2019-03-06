@@ -4,16 +4,16 @@
 	<title>Home</title>
 	      <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-      <link rel="stylesheet" href="css/style1.css">
-	  <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="cs/style1.css">
+	  <link rel="stylesheet" href="cs/style.css">
 </head>
 <body>
 
-      <img src="images\banner.gif" id="banner" alt="banner"/>
+      <img src="images\banner.gif" id="banner" style="padding-left: 160px; width: 100%" alt="banner"/>
       
 	  <marquee>Here is your 1 Stop Shop for Galway City</marquee>
       
-<div id="bor" class="w3-bar w3-black" style="border-color: white; border-style: solid;">
+<div  class="w3-bar w3-black" style="padding-left:160px;">
 	  <a href="index.php" class="w3-bar-item w3-button w3-mobile">Home</a>
       <a href="sell.php" class="w3-bar-item w3-button w3-mobile">Sell</a>
       <a href="register.php" class="w3-bar-item w3-button w3-mobile">Register</a>
