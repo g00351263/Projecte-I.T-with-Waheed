@@ -121,7 +121,7 @@ visibility: hidden;
                   } 
                   
                   
-                  $sql = "SELECT * FROM `ads` where category='electronics' ORDER by id desc";
+                  $sql = "SELECT * FROM `ads` where category='clothings' ORDER by id desc";
                   $result = $conn->query($sql);
                   
     

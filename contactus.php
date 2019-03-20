@@ -2,16 +2,7 @@
 <html>
 <head>
 <style>
-#waheed{
-  width: 100%;
-  max-width: 400px;
-  height: auto;
-}
-#raja{
-  width: 100%;
-  max-width: 400px;
-  height: auto;
-}
+
      #banner{
           width:100%;
      }
@@ -46,25 +37,46 @@ input[type=submit]:hover {
   background-color: #f2f2f2;
   padding: 20px;
 }
-</style>   
+button{
+
+	width: 200px;
+	height: 40px;
+	border-radius: 10px;
+	-webkit-transition-duration: 0.4s; /* Safari */
+	transition-duration: 0.4s;
+	border-style: groove;
+	border-width: 5px;
+	background: yellow;
+	
+	}
+	button:hover {
+    width: 250px;
+	height: 50px;
+	color: green;
+	} 
+#wrapper{
+	width: 1066.95px; 
+	margin: auto; 
+	background-color: gold; 
+	overflow: hidden; 
+	border: 2px solid darkcyan;
+	}	
 </style>
 </head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="cs/style.css">
+<link rel="stylesheet" href="style1.css">
 
 <body> 
-      <img src="images\banner.gif" id="banner"  alt="banner"/>
-<marquee>Here is your 1 Stop Shop for Galway City</marquee>
-
-<div  class="w3-bar w3-black" style="padding-left:160px;">
-  <a href="index.php" class="w3-bar-item w3-button w3-mobile">Home</a>
-  <a href="sell.php" class="w3-bar-item w3-button w3-mobile">Sell</a>
-  <a href="register.php" class="w3-bar-item w3-button w3-mobile">Sign Up</a>
-  <a href="login.php" class="w3-bar-item w3-button w3-mobile">Log In</a>
-  <a href="about.php" class="w3-bar-item w3-button w3-mobile">About Us</a>
-  <a href="contactus.php" class="w3-bar-item w3-button w3-mobile">Contact Us</a>
-</div>
+     <img src="images/banner.gif" style="width: 100%;" alt="banner"/>
+      <marquee>Here is your 1 Stop Shop for Galway City</marquee>
+      <div class="w3-bar w3-black" style="border-color: white; border-style: solid;">
+      <a href="index.php" class="w3-bar-item w3-button w3-mobile">Home</a>
+      <a href="sell.php" class="w3-bar-item w3-button w3-mobile">Sell</a>
+      <a href="register.php" class="w3-bar-item w3-button w3-mobile">Register</a>
+      <a href="login.php" class="w3-bar-item w3-button w3-mobile">Log In</a>
+      <a href="about.php" class="w3-bar-item w3-button w3-mobile">About Us</a>
+      <a href="contactus.php" class="w3-bar-item w3-button w3-mobile">Contact Us</a>
 <h3>Contact Form</h3>
 
 <div class="container">
@@ -85,9 +97,8 @@ input[type=submit]:hover {
     <label for="subject">Subject</label>
     <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
 
-    <input type="submit" value="Submit">
+    <button type="submit" value="Submit">Send Email</button>
   </form>
 </div>
-
 </body>
 </html>
