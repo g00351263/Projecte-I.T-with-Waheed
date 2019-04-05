@@ -173,8 +173,8 @@
          $username = mysqli_real_escape_string($dbcon, $_POST['username']);
          $category = mysqli_real_escape_string($dbcon, $_POST['category']);
          $description = mysqli_real_escape_string($dbcon, $_POST['description']);  
-         
-            $qry="insert into ads (category,description,username,photos) values ('$category','$description','$username','$image')";
+         $price = mysqli_real_escape_string($dbcon, $_POST['price']);  
+            $qry="insert into ads (category,description,username,photos,price) values ('$category','$description','$username','$image','$price')";
          
                $result=mysqli_query($dbcon,$qry);
                if($result)
