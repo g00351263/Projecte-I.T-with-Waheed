@@ -126,6 +126,22 @@
                   $dbname = "registration";
                   $count = 0;
                   
+				  // How many records per page
+				  $rpp = 10;
+				  
+				  //Check for set page
+				  isset($_GET['page']) ? $page = $_GET['page'] : $page =0;
+				  
+				  //check for page 1;
+				if($page > 1){
+					
+					$start = ($page * $rpp) - $rpp;
+				}else{
+					$start = 0;
+				}
+				
+				
+				  
                   
                   // Create connection
                   $conn = new mysqli($servername, $username, $password, $dbname);
@@ -135,9 +151,15 @@
                   } 
                   
                   
-                  $sql = "SELECT * FROM `ads` order by id desc";
+                  $sql = "SELECT id FROM `ads`";
                   $result = $conn->query($sql);
                   
+  $numRows = $result->num_rows;
+  
+  $totalPages = $numRows / $rpp;
+  
+  $sql = "SELECT * FROM `ads` order by id desc LIMIT $start, $rpp";
+  $result = $conn->query($sql);
   
                       // output data of each row
                       while($row = $result->fetch_assoc()) {
@@ -146,6 +168,8 @@
                   $field2name = $row["description"];
                   $field3name = $row["price"];
 				
+				
+
                   echo '
 				  
 
@@ -160,12 +184,18 @@
 
 										</a>
 									</div>';
+									
+
 } 
+												for($x = 1; $x<= $totalPages + 1; $x++){
+										echo "<div><a href='?page=$x'>$x</a></div>";
+									}
 		echo '
 									<br>
 										<div style="float: left";>
 											<text align="center">&nbspTotal Ads '.$count.'</text>
-										</div>';		
+										</div><br>';	
+											
 $conn->close();
 ?>
 									</div>
