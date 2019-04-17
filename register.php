@@ -1,4 +1,5 @@
 <?php include('logics/server.php') ?>
+
 <html>
    <head>
       <title>Registration Page</title>
@@ -58,6 +59,10 @@ body {
          </div>
          <p>
             Already a member? <a href="login.php">Sign in</a>
+         </p>
+		 
+		       <p>
+            Forgot Password? <a href="requestReset.php">Send Password</a>
          </p>
       </form>
 	  

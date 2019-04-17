@@ -17,6 +17,9 @@ input[type=text], select, textarea {
   margin-top: 6px;
   margin-bottom: 16px;
   resize: vertical;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 input[type=submit] {
@@ -82,10 +85,10 @@ button{
 <div class="container">
   <form action="/action_page.php">
     <label for="fname">First Name</label>
-    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+    <input type="text" id="fname" name="firstname" placeholder="Your name.."/>
 
     <label for="lname">Last Name</label>
-    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+    <input type="text" id="lname" name="lastname" placeholder="Your last name.."/>
 
     <label for="country">Country</label>
     <select id="country" name="country">
