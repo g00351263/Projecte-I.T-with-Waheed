@@ -31,7 +31,7 @@
                   $field2name = $row["description"];
                   $field3name = $row["price"];
 				  $field4name = $row["phone"];
-				
+				$field5name = $row["id"];
 				
 
                   echo ' 
@@ -44,7 +44,7 @@
 											<p class="description">Description : '.$field2name. '</p>
 											<p class="blinking">Price : '.$field3name.'</p>
 											<p class="Contact">Phone : '.$field4name. '</p>
-
+											<a href="delete.php?del='.$field5name.'">Delete</a>
 										</a>
 									</div>';
 								
