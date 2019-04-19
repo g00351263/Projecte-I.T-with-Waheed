@@ -15,3 +15,7 @@
 25th March Major Gui changes and Price column included in database.
 
 28th March Fixed Minor bugs.
+
+15 April Fixed all links to display correctly each ad on screen.
+
+20 April Delete, Popup and other minor problems solved.s
