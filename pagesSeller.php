@@ -20,11 +20,12 @@
                   } 
                   
 
-                  $sql = "SELECT * FROM `ads` WHERE username = '$name'";
+                  $sql = "SELECT * FROM `ads` WHERE username = '$name' order by id desc";
                   
   
   $result = $conn->query($sql);
                       // output data of each row
+					  
                       while($row = $result->fetch_assoc()) {
                   $count++;
                   $field1name = $row["category"];
@@ -35,17 +36,16 @@
 				
 
                   echo ' 
-									<div class= "ads">
-										<a href target="_new">
+									<div class= "ads" align="center">
+										<a href="delete.php?del='.$field5name.'">Delete</a>
 											<img src="data:image/jpeg;base64,'.base64_encode($row['photos'] ).'" height="300" width="200" class="img-thumnail"  />'.'
 
       
 											<p>Category    : '.$field1name. '</p>
 											<p class="description">Description : '.$field2name. '</p>
 											<p class="blinking">Price : '.$field3name.'</p>
-											<p class="Contact">Phone : '.$field4name. '</p>
-											<a href="delete.php?del='.$field5name.'">Delete</a>
-										</a>
+											
+								
 									</div>';
 								
 } 

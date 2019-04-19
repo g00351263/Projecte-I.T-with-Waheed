@@ -49,20 +49,21 @@
                   $field2name = $row["description"];
                   $field3name = $row["price"];
 				  $field4name = $row["phone"];
-				
-				
+				 $field5name = $row["id"];
 
+				
+  
+  
+  
                   echo '
 
 									<div class= "ads">
-										<a href target="_new">
-											<img src="data:image/jpeg;base64,'.base64_encode($row['photos'] ).'" height="300" width="200" class="img-thumnail"  />'.'
-
-      
+										<a href="popUp.php?pop='.$field5name.'" target="_blank">
+											<img style="margin-right: auto; margin-left: auto; display: block;" src="data:image/jpeg;base64,'.base64_encode($row['photos'] ).'" height="250" width="150" class="img-thumnail"  />'.'
 											<p>Category    : '.$field1name. '</p>
 											<p class="description">Description : '.$field2name. '</p>
 											<p class="blinking">Price : '.$field3name.'</p>
-											<p class="Contact">Phone : '.$field4name. '</p>
+										<p style="align: center; color: blue;">Click to See Details</p>
 
 										</a>
 									</div>';

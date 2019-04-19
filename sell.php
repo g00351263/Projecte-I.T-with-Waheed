@@ -99,8 +99,49 @@
 			</table><input name="image" type="file"> <input name="submit" type="submit" value="Upload"><br>
 		</form><br>
 		<br>
-		<p>Following are the Advertisement Online By You</p><br>
-		<div class="menu">
+		 <?php
+         $dbcon=mysqli_connect('localhost','root','','registration');
+         
+           // $qry="insert into ads (category,description,username,photos) values ('raja','raja','raja','$image')";
+         
+           if(isset($_POST['submit']))
+           {
+            if(getimagesize($_FILES['image']['tmp_name'])==FALSE)
+            {
+               echo " error ";
+            }
+            else
+            {
+         $image = $_FILES['image']['tmp_name'];
+                 $image = addslashes(file_get_contents($image));
+               saveimage($image);
+            }
+           }
+           function saveimage($image)
+           {
+         
+            	 $dbcon=mysqli_connect('localhost','root','','registration');
+         
+         $username = mysqli_real_escape_string($dbcon, $_POST['username']);
+         $category = mysqli_real_escape_string($dbcon, $_POST['category']);
+         $description = mysqli_real_escape_string($dbcon, $_POST['description']);  
+         $price = mysqli_real_escape_string($dbcon, $_POST['price']);  
+            $qry="insert into ads (category,description,username,photos,price) values ('$category','$description','$username','$image','$price')";
+         
+               $result=mysqli_query($dbcon,$qry);
+               if($result)
+               {
+                   echo " <br/>Image uploaded.";
+                   header('location:index.php');
+               }
+               else
+               {
+                   echo " error ";
+               }
+           }
+         ?>
+<p align="center">Following are the Advertisement Online By You</p><br>
+		<div class="menu" style="background-color: #bada55;">
 			<?php include 'pagesSeller.php';?>
 		</div>
 	</div>
