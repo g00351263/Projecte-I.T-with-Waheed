@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" type="text/css" href="mystyle.css">
 	
-	<style>
+	<!-- styling for the each ads displayed-->
+	<style>	
 		.ads {
 		width: 280px;
 		height: 420px;
@@ -48,10 +49,13 @@
                 <a href="motor.php" class="w3-bar-item w3-button w3-mobile">Motor</a>
             </div>
             <br>
+			
+			<!-- below is the file inserted to show all the ads in from database-->
             <div class="menu">
                 <?php include 'pages.php';?>
             </div>
-            <!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+			
+            <!--///This section of the div will be used to dipslay the ads by google adsense or amazon ads//////////-->
             <div class="third" id="third">
                 <img src="images\ad1.gif" width="500px" />
                 <img src="images\ad1.gif" width="500px" />
