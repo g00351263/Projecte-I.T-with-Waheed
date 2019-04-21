@@ -1,5 +1,6 @@
 <?php include('logics/server.php')?>
-
+<?php echo "http://" . $_SERVER["HTTP_HOST"] . dirname($_SERVER["PHP_SELF"]) . "/resetPassword.php?code=1234";
+?>
 <!DOCTYPE html>
 <html>
    <head>
@@ -32,40 +33,53 @@ body {
       <a href="login.php" class="w3-bar-item w3-button w3-mobile">Log In</a>
       <a href="about.php" class="w3-bar-item w3-button w3-mobile">About Us</a>
       <a href="contactus.php" class="w3-bar-item w3-button w3-mobile">Contact Us</a>
-      <div class="header">
-         <br>
-         <h2>Register</h2>
-      </div>
-      <form method="post" action="register.php" style="border-color: white; border-style: solid;">
-         <?php include('logics/errors.php'); ?>
-         <div class="input-group">
-		 <br>
-            <label>Username</label>
-            <input type="text" name="username" value="<?php echo $username; ?>">
-         </div>
-         <div class="input-group">
-            <label>Email</label>
-            <input type="email" name="email" value="<?php echo $email; ?>">
-         </div>
-         <div class="input-group">
-            <label>Password</label>
-            <input type="password" name="password_1">
-         </div>
-         <div class="input-group">
-            <label>Confirm password</label>
-            <input type="password" name="password_2">
-         </div>
-         <div class="input-group">
-            <button align="right" type="submit" class="w3-button w3-yellow"  name="reg_user" id="btn">Register</button>
-         </div>
-         <p>
-            Already a member? <a href="login.php">Sign in</a>
-         </p>
-		 
-		       <p>
-            Forgot Password? <a href="requestReset.php">Send Password</a>
-         </p>
-      </form>
-	  
+	  </div>
+      <div class="second">
+<?php
+
+$con = mysqli_connect("localhost","root","","registration");
+
+if(mysqli_connect_error()){
+	echo "Failed to connect" . mysqli_connect_errno();
+}
+
+if(!isset($_GET["code"])){
+	exit("Cant find page");
+}
+
+$code = $_GET["code"];
+
+$getEmailQuery= mysqli_query($con, "SELECT email FROM resetPasswords WHERE code ='$code'");
+
+if(mysqli_num_rows($getEmailQuery) == 0){
+	exit("Cant find page");
+}
+
+if(isset($_POST["password"])){
+	$pw = $_POST["password"];
+	$pw = md5($pw);
+	
+	$row = mysqli_fetch_array($getEmailQuery);
+	$email = $row["email"];
+	
+	$query = mysqli_query($con, "UPDATE users set password='$pw' WHERE email ='$email'");
+	
+	if($query) {
+		$query = mysqli_query($con, "DELETE FROM resetPassword WHERE code = '$code'");
+		exit("Password Updated");
+	}
+	else{
+		exit("Something went wrong");
+	}
+}
+?>
+
+<form method="POST">
+<input type="password" name="password" placeholder="New password">
+<br>
+<input type="submit" name="submit" placeholder="Update password">
+
+</form>
+	  </div>
    </body>
 </html>
