@@ -19,3 +19,5 @@
 15 April Fixed all links to display correctly each ad on screen.
 
 20 April Delete, Popup and other minor problems solved.s
+
+21 April Forgot password working and reset email is sent.

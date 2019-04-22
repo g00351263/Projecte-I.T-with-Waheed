@@ -89,6 +89,7 @@ try {
     //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 
     // Content
+	// this url is for reseting password and code merging to get unique token page //
 	$url = "http://" . $_SERVER["HTTP_HOST"] . dirname($_SERVER["PHP_SELF"]) . "/resetPassword.php?code=$code";
     $mail->isHTML(true);                                  // Set email format to HTML
     $mail->Subject = 'Your password reset link';
