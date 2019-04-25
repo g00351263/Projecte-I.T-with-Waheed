@@ -1,6 +1,15 @@
-#banner{
-    width:100%;
+﻿	  html {
+    min-height: 100%;
 }
+ 
+body {
+    background: -webkit-linear-gradient(left, #93B874, #C9DCB9); 
+    background: -o-linear-gradient(right, #93B874, #C9DCB9); 
+    background: -moz-linear-gradient(right, #93B874, #C9DCB9); 
+    background: linear-gradient(to right, #93B874, #C9DCB9); 
+    background-color: #93B874; 
+}
+
 input {
     margin-top: 5px;
     margin-bottom: 5px;
@@ -20,7 +29,103 @@ label {
     text-align: right;
     width: 140px;
 }
-#btn{
-    margin-left: 158px;
-    border-radius: 10px;
+
+
+#td1
+{
+  width:20px; 
+  word-wrap:break-word;
+}
+	  .column1 {
+  float: left;
+  width: 25%;
+  padding-top: 75px;
+}
+	  .column2 {
+
+
+}
+	  .column {
+  float: left;
+  width: 50%;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* The sidebar menu */
+.sidenav {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 160px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #111; /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 12px;
+  color: #818181;
+  display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+
+ @media (max-width: 600px) {
+        .sidenav {
+			z-index: 1; /* Stay on top */
+			  width: 80px; 
+			
+        }
+		
+		    .sidenav2 {
+            display: none;
+        }
+		.banner{
+			padding-left: 1px;
+			margin-left: 0px;
+			width: 100%;
+		}
+    }
+.banner{
+	width: 100%;
+	padding-left: 160px;
+		
+}
+.banner{
+	width: 100%
+}
+		 @media (max-width: 400px) {
+        #sizephoto {
+            width: 12%;
+        }
+    }
+
+
+
+/* media */
+@media screen and (max-width:720px){
+    .container{
+        width: 100%;
+    }
+    #div_login{
+        width: 99%;
+    }
+
+		.pages {
+		color:red;
 	}

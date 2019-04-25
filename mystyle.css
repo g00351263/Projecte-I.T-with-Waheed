@@ -1,0 +1,77 @@
+﻿	.blinking {
+		animation: blinkingText 0.9s infinite;
+	}
+	
+	@keyframes blinkingText {
+		0% {
+			color: #000;
+		}
+		49% {
+			color: transparent;
+		}
+		50% {
+			color: transparent;
+		}
+		99% {
+			color: transparent;
+		}
+		100% {
+			color: #000;
+		}
+	}
+	
+	.banner {
+		width: 100%;
+	}
+	
+	.wrapper {
+		display: table;
+		width: auto;
+	}
+	
+	.row {
+		display: table-row;
+	}
+	
+	.first {
+		display: table-cell;
+		background-color: red;
+		width: 200px;
+	}
+	
+	.second {
+		display: table-cell;
+		background-color: #bada55;
+		width: 1500px;
+		margin: auto;
+	}
+	
+	.third {
+		display: table-cell;
+		background-color: #bada55;
+		width: auto;
+	}
+	
+	
+	.description {
+		max-width: 300px;
+		word-wrap: break-word;
+	}
+	
+	a:link {
+		text-decoration: none;
+	}
+	
+
+	
+	@media screen and (max-width:420px) {
+		#third {
+			display: none;
+			visibility: hidden;
+		}
+	}
+
+
+.pages {
+		color:red;
+	}

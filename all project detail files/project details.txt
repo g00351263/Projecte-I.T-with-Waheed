@@ -1,0 +1,13 @@
+Team Members Name: Raja Naseer Ahmed Khan and Waheed Akram
+
+Supervisor: Kevin Obrien.
+
+Title     : Galway Buy and Sell Website.
+
+Github : https://github.com/g00351263/Projecte-I.T-with-Waheed
+
+Video and Presentation : Youtube video of how to use: https://youtu.be/JWob0b5OJIc
+
+
+Documentation can be found at Github folder readme files at following link
+https://github.com/g00351263/Projecte-I.T-with-Waheed/blob/master/readme%20files/I.T.%20Project%20Documentations.docx
